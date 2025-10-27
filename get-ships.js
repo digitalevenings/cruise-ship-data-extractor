@@ -3,7 +3,7 @@
  * CRUISE SHIPS DATA EXTRACTOR
  * ========================================
  *
- * Scrapes comprehensive cruise ship data from the Odysseus cruise booking platform.
+ * Scrapes comprehensive cruise ship data from the Ody cruise booking platform.
  * Extracts detailed information for ~1,155 ships across all major cruise lines.
  *
  * Features:
@@ -13,7 +13,7 @@
  * - Uses ScraperAPI for reliable data extraction
  *
  * @requires dotenv - Environment variable management
- * @requires ./libs/ody.js - Odysseus API service module
+ * @requires ./libs/ody.js - Ody API service module
  */
 
 import dotenv from "dotenv";
@@ -125,13 +125,13 @@ function logSection(message) {
 // ========================================
 
 /**
- * Fetches the master list of all ships from the Odysseus API.
- * @param {string} baseUrl - Base URL for the Odysseus API
+ * Fetches the master list of all ships from the Ody API.
+ * @param {string} baseUrl - Base URL for the Ody API
  * @returns {Promise<object>} Master data containing all ships
  * @throws {Error} If master data fetch fails or no ships found
  */
 async function fetchMasterData(baseUrl) {
-  console.log("🌐 Fetching master data from Odysseus API...");
+  console.log("🌐 Fetching master data from Ody API...");
 
   const masterUrl = `${baseUrl}${MASTER_API_PATH}`;
   const masterResult = await getService(masterUrl);
@@ -159,7 +159,7 @@ function saveMasterData(filePath, masterData) {
 
 /**
  * Fetches detailed information for a single ship.
- * @param {string} baseUrl - Base URL for the Odysseus API
+ * @param {string} baseUrl - Base URL for the Ody API
  * @param {number} shipId - ID of the ship to fetch
  * @returns {Promise<object>} Ship details data
  */
@@ -171,7 +171,7 @@ async function fetchShipDetails(baseUrl, shipId) {
 /**
  * Processes a single ship: fetches details and saves to file.
  * @param {object} ship - Ship object from master list
- * @param {string} baseUrl - Base URL for the Odysseus API
+ * @param {string} baseUrl - Base URL for the Ody API
  * @param {string} shipsFile - Path to the ships output file
  * @param {number} totalShips - Total number of ships for progress tracking
  * @param {object} counters - Object containing processed/failed counters
@@ -211,7 +211,7 @@ async function processShip(ship, baseUrl, shipsFile, totalShips, counters) {
 /**
  * Processes all ships in parallel batches.
  * @param {Array<object>} ships - Array of ship objects to process
- * @param {string} baseUrl - Base URL for the Odysseus API
+ * @param {string} baseUrl - Base URL for the Ody API
  * @param {string} shipsFile - Path to the ships output file
  * @param {number} maxThreads - Maximum concurrent requests
  * @returns {Promise<object>} Object with processed and failed counts

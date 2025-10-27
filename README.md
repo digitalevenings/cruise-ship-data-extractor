@@ -1,6 +1,6 @@
 # Cruise Ships Data Extractor
 
-A Node.js scraper that extracts comprehensive cruise ship data from the Odysseus cruise booking platform. Scrapes detailed ship information for ~1,155 ships across all major cruise lines, including images, amenities, and specifications.
+A Node.js scraper that extracts comprehensive cruise ship data from the Ody cruise booking platform. Scrapes detailed ship information for ~1,155 ships across all major cruise lines, including images, amenities, and specifications.
 
 > 💡 **New to web scraping?** This project uses [ScraperAPI](https://www.scraperapi.com/?fp_ref=scrapeall) to handle proxy rotation, CAPTCHAs, and rate limiting. Get **5,000 free API calls** to get started! (Referral link - supports this project 🙏)
 
@@ -19,7 +19,7 @@ A Node.js scraper that extracts comprehensive cruise ship data from the Odysseus
 
 ## Features
 
-- ✅ Scrapes master list of all ships from Odysseus API
+- ✅ Scrapes master list of all ships from Ody API
 - ✅ Retrieves detailed information for each ship (images, amenities, descriptions)
 - ✅ Downloads ship gallery images automatically
 - ✅ Outputs data in **JSONL** (JSON Lines) format
@@ -216,7 +216,7 @@ MEDIA_MAX_THREADS=20
 ```
 cruise-ships-data-extractor/
 ├── libs/
-│   └── ody.js                # Odysseus API service module
+│   └── ody.js                # Ody API service module
 ├── output/                   # Output directory (auto-created)
 │   ├── master.jsonl          # Master ship list
 │   ├── ships.jsonl           # Detailed ship data
@@ -232,9 +232,9 @@ cruise-ships-data-extractor/
 
 ## How It Works
 
-1. **Cookie Management** - Uses Puppeteer to automatically retrieve and cache session cookies from the Odysseus website
+1. **Cookie Management** - Uses Puppeteer to automatically retrieve and cache session cookies from the Ody website
 2. **ScraperAPI Integration** - All API requests are routed through ScraperAPI for reliability and to avoid rate limiting
-3. **Data Fetching** - Makes authenticated requests to the Odysseus API to fetch ship data
+3. **Data Fetching** - Makes authenticated requests to the Ody API to fetch ship data
 4. **Data Decryption** - Some API responses are XOR-encrypted and are automatically decrypted
 5. **Parallel Processing** - Processes multiple ships concurrently based on `SCRAPERAPI_MAX_THREADS` setting
 6. **Image Downloads** - Downloads ship gallery images directly (without ScraperAPI) and organizes by ship ID

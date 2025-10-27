@@ -1,7 +1,7 @@
 {
   "name": "cruise-ships-data-extractor",
   "version": "1.0.0",
-  "description": "A Node.js scraper that extracts comprehensive cruise ship data from Odysseus cruise booking platform. Scrapes detailed ship information for ~1,155 ships including images, amenities, and specifications.",
+  "description": "A Node.js scraper that extracts comprehensive cruise ship data from Ody cruise booking platform. Scrapes detailed ship information for ~1,155 ships including images, amenities, and specifications.",
   "type": "module",
   "main": "get-ships.js",
   "scripts": {
