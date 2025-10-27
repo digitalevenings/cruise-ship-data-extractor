@@ -1,14 +1,14 @@
-# Environment variables
-.env
+# Dependencies
+node_modules/
 
-# Output directories
+# Output data
 output/
 
 # Temporary files
 .tmp/
 
-# Node modules
-node_modules/
+# Environment variables
+.env
 
 # Logs
 *.log
@@ -16,13 +16,17 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# OS files
+# OS
 .DS_Store
 Thumbs.db
 
-# IDE files
+# IDE
 .vscode/
 .idea/
 *.swp
 *.swo
 *~
+
+# Backup files
+*.bak
+*.tmp

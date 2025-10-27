@@ -1,22 +1,31 @@
 {
   "name": "cruise-ships-data-extractor",
   "version": "1.0.0",
-  "description": "Scraper for ship data from Odysseus cruise website",
+  "description": "A Node.js scraper that extracts comprehensive cruise ship data from Odysseus cruise booking platform. Scrapes detailed ship information for ~1,155 ships including images, amenities, and specifications.",
   "type": "module",
-  "main": "index.js",
+  "main": "get-ships.js",
   "scripts": {
+    "start": "node get-ships.js",
     "get-ships": "node get-ships.js",
-    "download-media": "node download-media.js",
-    "start": "node get-ships.js"
+    "download-media": "node download-media.js"
   },
   "keywords": [
     "scraper",
-    "odysseus",
     "cruise",
-    "ships"
+    "ships",
+    "odysseus",
+    "web-scraping",
+    "data-extraction",
+    "scraperapi",
+    "cruise-data",
+    "ship-information"
   ],
   "author": "",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/cruise-ships-data-extractor.git"
+  },
   "dependencies": {
     "dotenv": "^16.4.5",
     "puppeteer": "^23.5.0"
