@@ -74,6 +74,13 @@ async function getCookies() {
     return;
   } else {
     await refreshCookies();
+
+    // Ensure .tmp directory exists
+    const cookiesDir = path.dirname(cookiesFilePath);
+    if (!fs.existsSync(cookiesDir)) {
+      fs.mkdirSync(cookiesDir, { recursive: true });
+    }
+
     fs.writeFileSync(cookiesFilePath, JSON.stringify(cookies));
   }
 }
